@@ -1,5 +1,6 @@
 package com.example.noveljson
 
+import com.example.noveljson.image.ImageFileHandler
 import java.io.File
 
 val outputDir = "D:\\novalAI\\temp"
@@ -10,8 +11,9 @@ suspend fun main(args: Array<String>) {
     //NovelAPIService.txt2img("")
     //val ss = GenerateVMD()
     //ss.generateVMD(0, 2835)
-    renameFiles("""D:\ccc3""")
+    //renameFiles("""D:\ccc3""")
     //ss.generateVideo(0, 2700)
+    ImageFileHandler().readImage()
 }
 
 fun renameFiles(path:String) {
