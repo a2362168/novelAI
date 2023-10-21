@@ -15,11 +15,11 @@ data class FacialData (
 )
 
 class GenerateVMD {
-    val face = """D:\mmd\UserFile\Model\Is the Order a Rabbit\Poppin Jump (Short Ver.)\maya_face.txt"""
-    val bone = """D:\mmd\UserFile\Model\Is the Order a Rabbit\Poppin Jump (Short Ver.)\maya_bone.txt"""
-    val eyes = ",yellow eyes"
-    val front = ",blush"
-    val lora = ",<lora:Gochuumon_all_resized:0.7:MIDD>,<lora:animixAnimeScreenshotLikeStyleMixLora_v10:0.6:OUTALL>,white_background,simple_background"
+    val face = """D:\mmd\UserFile\Model\Is the Order a Rabbit\Poppin Jump (Short Ver.)\megu_face.txt"""
+    val bone = """D:\mmd\UserFile\Model\Is the Order a Rabbit\Poppin Jump (Short Ver.)\megu_bone.txt"""
+    val eyes = ",red eyes"
+    val front = "blush"
+    val lora = ",(light smile:0.6),<lora:Gochuumon_all_resized:0.7:MIDD>,<lora:animixAnimeScreenshotLikeStyleMixLora_v10:0.6:OUTALL>,white_background,simple_background"
     val half_eye = 0.35
     val closed_eye = 0.72
     val step = 1
@@ -97,7 +97,7 @@ class GenerateVMD {
             for (i in start..end step step) {
                 var curprpmt = String()
 
-                val output = File(String.format("D:\\ccc6\\%04d.txt", (i-start)/step+2))
+                val output = File(String.format("D:\\ccc6\\%04d.txt", (i-start)/step+1))
                 output.writer().use {
 
                     var facialData = getBoneValue(allBone, i, listOf("上半身", "上半身2", "首" ,"頭", "全ての親", "グルーブ", "センター"), true)
